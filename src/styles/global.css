@@ -1,29 +1,89 @@
-html {
+/**** CSS RESET ****/
+
+/* Box sizing rules */
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+/* Remove default margin */
+
+/* body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+} */
+
+/* Set core root defaults */
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+
+body {
+  text-rendering: optimizeSpeed;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+/* input,
+button,
+textarea,
+select {
+  font: inherit;
+} */
+
+/**** CSS STYLES ****/
+
+/* html {
   background-color: #f1f5f9;
   font-family: sans-serif;
 }
 
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
 body {
-  margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
   padding: 1rem;
   line-height: 1.5;
 }
 
-* {
-  box-sizing: border-box;
+.main-container {
+  display: flex;
 }
 
-h1 {
-  margin: 1rem 0;
-  font-size: 2.5rem;
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 4rem;
+  padding: 5px;
+  background-color: blue;
 }
 
-/* nav styles */
+.main-content image {
+  width: ;
+}
+
+.post {
+  background-color: red;
+} */
 
 /* nav styles */
-.hamburger {
+/* .hamburger {
   padding-right: 20px;
   cursor: pointer;
 }
@@ -82,3 +142,4 @@ a:focus {
     display: none;
   }
 }
+ */

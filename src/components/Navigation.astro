@@ -1,7 +1,13 @@
 ---
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo-black.png";
 ---
-<div class="nav-links">
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
+
+<!-- <a href="/"><Image src={logo} alt=" logo" /></a> -->
+<div class="bg-white text-black px-2 py-1">
+  <ul class="flex">
+    <li><a href="/">Old Amica</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
 </div>

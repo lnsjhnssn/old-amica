@@ -1,5 +1,28 @@
 ---
-const { title, url } = Astro.props;
+import { Image } from "astro:assets";
+import { YouTube } from "astro-embed";
+
+const { post } = Astro.props;
+const { title, year, label, bandcamp, spotify, image, video, type } = post.data;
 ---
 
-<li><a href={url}>{title}</a></li>
+<div class="text-center px-3 sm:px-4 my-8">
+  <Image src={image} alt=" album cover" quality={"high"} class="shadow-md" />
+  <h2 class="text-xl mt-4">{title}</h2>
+  <p class="text-sm">{type} {year}</p>
+
+  <!-- <p>{label}</p>
+  <p>Buy on <a href={bandcamp} target="_blank">Bandcamp</a></p>
+  <p>Listen on <a href={spotify} target="_blank">Spotify</a></p> -->
+</div>
+
+<style>
+  a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+</style>

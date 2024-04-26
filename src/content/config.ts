@@ -16,6 +16,21 @@ const postsCollection = defineCollection({
     }),
 });
 // Export a single `collections` object to register your collection(s)
+
+// Define a `type` and `schema` for each collection
+const videosCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    year: z.string(),
+    director: z.string().optional(),
+    video_url: z.string().optional(),
+    type: z.string().optional(),
+    tags: z.array(z.string()),
+  }),
+});
+// Export a single `collections` object to register your collection(s)
 export const collections = {
   posts: postsCollection,
+  videos: videosCollection,
 };

@@ -1,14 +1,17 @@
 ---
-import { Image } from "astro:assets";
+import { YouTube } from "astro-embed";
+import { Vimeo } from "astro-embed";
 
-const { post } = Astro.props;
-const { title, year, label, bandcamp, spotify, image, type } = post.data;
+const { video } = Astro.props;
+const { title, year, director, video_url, type } = video.data;
 ---
 
-<div class="text-center px-4 sm:px-4 my-8">
-  <Image src={image} alt=" album cover" quality={"high"} class="shadow-md" />
+<div class="text-center px-3 sm:px-4 my-8">
+  <YouTube id={video_url} class="shadow-md" />
+
   <h2 class="text-xl mt-4">{title}</h2>
-  <p class="text-sm">{type} {year}</p>
+  <p>{director}</p>
+  <p class="text-sm">{year}</p>
 
   <!-- <p>{label}</p>
   <p>Buy on <a href={bandcamp} target="_blank">Bandcamp</a></p>

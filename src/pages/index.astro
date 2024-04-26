@@ -1,24 +1,18 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import BlogPost from "../components/BlogPost.astro";
-import VideoPost from "../components/VideoPost.astro";
-
-const pageTitle = "Home";
-const allPosts = await getCollection("posts");
-const allVideos = await getCollection("videos");
+import BlogPostCollection from "../components/BlogPostCollection.astro";
+import VideoCollection from "../components/VideoCollection.astro";
+import Hero from "../components/Hero.astro";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 place-items-center"
-  >
-    {allPosts.map((post) => <BlogPost post={post} />)}
+<BaseLayout>
+  <!-- <Hero /> -->
+  <div class="text-center">
+    <h2 class="text-2xl pt-8">RELEASES</h2>
+    <BlogPostCollection />
   </div>
-  <div class="text-center bg-black text-white mt-14">
+  <div class="text-center bg-black text-gray-200 mt-14">
     <h2 class="text-2xl pt-8">FILM / VIDEO</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-      {allVideos.map((video) => <VideoPost video={video} />)}
-    </div>
+    <VideoCollection />
   </div>
 </BaseLayout>

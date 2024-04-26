@@ -1,0 +1,12 @@
+---
+import { getCollection } from "astro:content";
+import VideoPost from "../components/VideoPost.astro";
+
+const allVideos = await getCollection("videos");
+---
+
+<div
+  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-7xl mx-auto"
+>
+  {allVideos.map((video) => <VideoPost video={video} />)}
+</div>

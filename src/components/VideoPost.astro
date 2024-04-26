@@ -1,12 +1,11 @@
 ---
 import { YouTube } from "astro-embed";
-import { Vimeo } from "astro-embed";
 
 const { video } = Astro.props;
 const { title, year, director, video_url, type } = video.data;
 ---
 
-<div class="text-center px-3 sm:px-4 my-8">
+<div class="text-center px-4 my-8">
   <YouTube id={video_url} class="shadow-md" />
 
   <h2 class="text-xl mt-4">{title}</h2>

@@ -1,13 +1,22 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../assets/images/logo-black.png";
+import logo from "../assets/images/oldamica-logo-black.png";
+import MusicIcons from "./MusicIcons.astro";
 ---
 
 <!-- <a href="/"><Image src={logo} alt=" logo" /></a> -->
-<div class="bg-white text-black px-2 py-1">
-  <ul class="flex">
-    <li><a href="/">Old Amica</a></li>
-    <li><a href="/about/">About</a></li>
-    <li><a href="/contact/">Contact</a></li>
+<div class="max-w-7xl">
+  <!-- <a href="/"><Image src={logo} alt="old amica-logo" height={40} /></a> -->
+
+  <ul class="grid grid-cols-3 justify-items-center">
+    <li class="justify-self-start"><MusicIcons /></li>
+    <li>
+      <a href="/"><Image src={logo} alt="old amica-logo" height={40} /></a>
+    </li>
+    <li class="justify-self-end">
+      <button class="hover:bg-gray-100 text-black px-2 py-1"
+        ><a href="/contact/">Contact</a></button
+      >
+    </li>
   </ul>
 </div>

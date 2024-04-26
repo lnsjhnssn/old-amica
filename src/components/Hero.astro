@@ -1,0 +1,35 @@
+---
+import Image from "astro/components/Image.astro";
+
+import on from "../content/posts/images/on.jpg";
+import fyr from "../content/posts/images/fyr.jpg";
+import fyrBack from "../content/posts/images/fyr-back.jpg";
+---
+
+<hr />
+<div class="grid grid-cols-3 gap-2 max-w-7xl px-4 mx-auto my-8">
+  <div>
+    <h2 class="text-2xl">Ön</h2>
+  </div>
+  <Image src={on} alt="hero image" loading={"eager"} />
+</div>
+
+<hr />
+
+<div class="grid grid-cols-3 gap-2 max-w-7xl px-4 mx-auto my-8">
+  <div>
+    <h2 class="text-2xl">Fyr</h2>
+  </div>
+  <Image src={fyr} alt="hero image" loading={"eager"} />
+  <Image src={fyrBack} alt="hero image" loading={"eager"} />
+</div>
+
+<hr />
+
+<div class="grid grid-cols-3 gap-2 max-w-7xl px-4 mx-auto my-8">
+  <div>
+    <h2 class="text-2xl">Fyr</h2>
+  </div>
+  <Image src={fyr} alt="hero image" />
+  <Image src={fyrBack} alt="hero image" />
+</div>

@@ -5,11 +5,10 @@ const { post } = Astro.props;
 const { title, year, label, bandcamp, spotify, image, type } = post.data;
 ---
 
-<div class="text-center px-4 sm:px-4 my-8">
+<div class="text-center px-4 my-8">
   <Image src={image} alt=" album cover" quality={"high"} class="shadow-md" />
   <h2 class="text-xl mt-4">{title}</h2>
   <p class="text-sm">{type} {year}</p>
-
   <!-- <p>{label}</p>
   <p>Buy on <a href={bandcamp} target="_blank">Bandcamp</a></p>
   <p>Listen on <a href={spotify} target="_blank">Spotify</a></p> -->

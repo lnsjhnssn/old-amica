@@ -1,12 +1,32 @@
 ---
-
+import SocialIcons from "./SocialIcons.astro";
+import MusicIcons from "./MusicIcons.astro";
 ---
 
-<footer class="bg-black text-white px-2 py-1 mt-4">
-  <ul class="flex justify-center">
-    <li><a href="/">CONTACT</a></li>
-  </ul>
-  <div class="text-center">
-    <p class="text-xs">© 2024. All Rights Reserved.</p>
+<footer
+  id="contact"
+  class="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto text-center"
+>
+  <div></div>
+  <div class="px-4">
+    <h2 class="text-xl md:text-3xl my-8 pt-2">CONTACT</h2>
+    <p>oldamica@gmail.com</p>
+    <hr class="border-gray-100 my-8" />
+    <SocialIcons />
+    <hr class="border-gray-100 my-8" />
+    <!-- <a href="#videos"
+      ><button
+        type="button"
+        class="text-white bg-zinc-900 hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 my-12"
+      >
+        Join our Newsletter
+      </button>
+    </a> -->
+
+    <p>Thank you for listening.</p>
+    <div class="mt-8">
+      <p class="text-xs">© 2024 Old Amica. All rights reserved.</p>
+    </div>
   </div>
+  <div></div>
 </footer>

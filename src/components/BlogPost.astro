@@ -1,26 +1,31 @@
 ---
 import { Image } from "astro:assets";
+import BlogPostIcons from "./BlogPostIcons.astro";
 
 const { post } = Astro.props;
-const { title, year, label, bandcamp, spotify, image, type } = post.data;
+const {
+  title,
+  year,
+  label,
+  textBandcamp,
+  textSpotify,
+  bandcamp,
+  spotify,
+  image,
+  type,
+} = post.data;
 ---
 
-<div class="text-center px-4 my-8">
+<div class="text-left px-4 my-8 font-medium">
   <Image src={image} alt=" album cover" quality={"high"} class="shadow-md" />
-  <h2 class="text-xl mt-4">{title}</h2>
-  <p class="text-sm">{type} {year}</p>
-  <!-- <p>{label}</p>
-  <p>Buy on <a href={bandcamp} target="_blank">Bandcamp</a></p>
-  <p>Listen on <a href={spotify} target="_blank">Spotify</a></p> -->
+  <h3 class="text-lg md:text-xl mt-3">{title}</h3>
+  <p class="font-normal">{type}</p>
+  <p class="font-normal">{label} {year}</p>
+  <div>
+    <p>
+      <a href={bandcamp} target="_blank">{textBandcamp}</a>
+    </p>
+    <p><a href={spotify} target="_blank">{textSpotify}</a></p>
+  </div>
+  <!-- <BlogPostIcons /> -->
 </div>
-
-<style>
-  a {
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-</style>

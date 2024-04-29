@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../assets/images/oldamica-logo-black.png";
+import logo from "../assets/images/logo-black.png";
 import MusicIcons from "./MusicIcons.astro";
 ---
 
@@ -8,15 +8,28 @@ import MusicIcons from "./MusicIcons.astro";
 <div class="max-w-7xl">
   <!-- <a href="/"><Image src={logo} alt="old amica-logo" height={40} /></a> -->
 
-  <ul class="grid grid-cols-3 justify-items-center">
-    <li class="justify-self-start"><MusicIcons /></li>
-    <li>
-      <a href="/"><Image src={logo} alt="old amica-logo" height={40} /></a>
+  <ul
+    class="grid grid-cols-2 md:grid-cols-3 justify-items-center place-items-center"
+  >
+    <li class="justify-self-start hidden md:block"><MusicIcons /></li>
+    <li class="justify-self-start md:justify-self-center">
+      <a href="/"><Image src={logo} alt="old amica-logo" height={} /></a>
     </li>
     <li class="justify-self-end">
-      <button class="hover:bg-gray-100 text-black px-2 py-1"
-        ><a href="/contact/">Contact</a></button
-      >
+      <ul>
+        <li>
+          <a href="#releases">RELEASES</a>
+        </li>
+        <li>
+          <a href="#video">VIDEO</a>
+        </li>
+        <li>
+          <a href="/">ABOUT</a>
+        </li>
+        <li>
+          <a href="#contact">CONTACT</a>
+        </li>
+      </ul>
     </li>
   </ul>
 </div>

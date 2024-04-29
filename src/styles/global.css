@@ -143,3 +143,18 @@ a:focus {
   }
 }
  */
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h2,
+h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+}

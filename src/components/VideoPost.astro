@@ -5,12 +5,13 @@ const { video } = Astro.props;
 const { title, year, director, video_url, type } = video.data;
 ---
 
-<div class="text-left px-4 my-8">
+<div class="text-left px-4">
   <YouTube id={video_url} class="shadow-md" />
-
-  <h3 class="text-lg md:text-xl mt-3">{title}</h3>
-  <p>{director}</p>
-  <p>{year}</p>
+  <div class="mt-4 mb-12">
+    <h3 class="text-lg md:text-xl">{title}</h3>
+    <p>{director}</p>
+    <p>{year}</p>
+  </div>
 
   <!-- <p>{label}</p>
   <p>Buy on <a href={bandcamp} target="_blank">Bandcamp</a></p>

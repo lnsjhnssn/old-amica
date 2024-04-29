@@ -8,16 +8,14 @@ import MusicIcons from "./MusicIcons.astro";
 <div class="max-w-7xl">
   <!-- <a href="/"><Image src={logo} alt="old amica-logo" height={40} /></a> -->
 
-  <ul
-    class="grid grid-cols-2 md:grid-cols-3 justify-items-center place-items-center"
-  >
-    <li class="justify-self-start hidden md:block"><MusicIcons /></li>
-    <li class="justify-self-start md:justify-self-center">
+  <ul class="grid grid-cols-3 justify-items-center place-items-center">
+    <li class="justify-self-start"><MusicIcons /></li>
+    <li class="justify-self-center">
       <a href="/"><Image src={logo} alt="old amica-logo" height={} /></a>
     </li>
     <li class="justify-self-end">
       <ul>
-        <li>
+        <!-- <li>
           <a href="#releases">RELEASES</a>
         </li>
         <li>
@@ -25,9 +23,16 @@ import MusicIcons from "./MusicIcons.astro";
         </li>
         <li>
           <a href="/">ABOUT</a>
-        </li>
+        </li> -->
         <li>
-          <a href="#contact">CONTACT</a>
+          <a href="#contact"
+            ><button
+              type="button"
+              class="text-white bg-zinc-900 hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-xs md:text-sm px-4 py-2 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 my-4 md:my-8"
+            >
+              Contact
+            </button>
+          </a>
         </li>
       </ul>
     </li>

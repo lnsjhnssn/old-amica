@@ -1,6 +1,6 @@
 ---
 title: "Taiga"
-year: "2023"
+year: "2019"
 label: Whitelabrecs
 textBandcamp: Bandcamp
 textSpotify: Spotify

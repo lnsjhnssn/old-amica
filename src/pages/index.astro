@@ -2,19 +2,20 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPostCollection from "../components/BlogPostCollection.astro";
 import VideoCollection from "../components/VideoCollection.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <BaseLayout>
   <!-- <Hero /> -->
   <section id="video">
     <div class="text-center">
-      <h2 class="text-xl md:text-3xl py-6 md:py-12 sm:pt-8">Releases</h2>
+      <h1 class="text-xl md:text-3xl py-6 md:py-12 sm:pt-8">Releases</h1>
       <BlogPostCollection />
     </div>
   </section>
-  <section id="video">
+  <section id="video ">
     <div class="text-center bg-zinc-900 text-zinc-100">
-      <h2 class="text-xl md:text-3xl py-12 sm:pt-8">Video</h2>
+      <h1 class="text-xl md:text-3xl py-12 sm:pt-8">Video</h1>
       <VideoCollection />
     </div>
   </section>

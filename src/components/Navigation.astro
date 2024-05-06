@@ -4,10 +4,7 @@ import logo from "../assets/images/logo-black.png";
 import MusicIcons from "./MusicIcons.astro";
 ---
 
-<!-- <a href="/"><Image src={logo} alt=" logo" /></a> -->
 <div class="max-w-7xl">
-  <!-- <a href="/"><Image src={logo} alt="old amica-logo" height={40} /></a> -->
-
   <ul class="grid grid-cols-3 justify-items-center place-items-center">
     <li class="justify-self-start"><MusicIcons /></li>
     <li class="justify-self-center">
@@ -16,10 +13,11 @@ import MusicIcons from "./MusicIcons.astro";
     <li class="justify-self-end">
       <ul>
         <li>
-          <a href="#contact"
+          <a href="mailto:oldamica@gmailcom"
             ><button
+              id="contact-btn"
               type="button"
-              class="text-white bg-zinc-900 hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-xs md:text-sm px-4 py-2 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 my-4 md:my-8"
+              class="text-white bg-zinc-900 font-medium rounded-lg text-xs md:text-sm px-4 py-2 text-center inline-flex items-center my-4 md:my-4"
             >
               Contact
             </button>

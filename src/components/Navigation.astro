@@ -4,26 +4,43 @@ import logo from "../assets/images/logo-black-2.png";
 import MusicIcons from "./MusicIcons.astro";
 ---
 
-<div class="max-w-7xl">
-  <ul class="grid grid-cols-3 justify-items-center place-items-center">
-    <li class="justify-self-start"><MusicIcons /></li>
-    <li class="justify-self-center">
-      <a href="/"><Image src={logo} alt="old amica" height={40} /></a>
+<div class="nav-container">
+  <h1><a href="/">Old Amica</a></h1>
+  <ul>
+    <li>
+      <a href="https://oldamica.bandcamp.com/">Bandcamp</a>
     </li>
-    <li class="justify-self-end">
-      <ul>
-        <li>
-          <a href="mailto:oldamica@gmail.com"
-            ><button
-              id="contact-btn"
-              type="button"
-              class="text-white bg-zinc-900 font-medium rounded-lg text-xs md:text-sm px-4 py-2 text-center inline-flex items-center my-4 md:my-4"
-            >
-              Contact
-            </button>
-          </a>
-        </li>
-      </ul>
+    <li>
+      <a
+        href="https://open.spotify.com/artist/5toq1yTDxwyzLPa6nChApJ?si=rngK7OBBQe-VDjwvNOV69w"
+        >Spotify</a
+      >
+    </li>
+    <li>
+      <a href="https://instagram.com/oldamica">Instagram</a>
+    </li>
+    <li>
+      <a href="https://facebook.com/oldamica">Facebook</a>
+    </li>
+    <li class="mail-link">
+      <a href="mailto:oldamica@gmail.com">oldamica@gmail.com</a>
     </li>
   </ul>
+
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem;
+    }
+
+    .mail-link {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    h1 a {
+      text-decoration: none;
+    }
+  </style>
 </div>

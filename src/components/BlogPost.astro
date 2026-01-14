@@ -16,22 +16,141 @@ const {
 } = post.data;
 ---
 
-<div class="text-left px-4">
-  <a href={bandcamp} target="_blank">
-    <Image src={image} alt=" album cover" quality={"high"} class="rounded" />
-  </a>
-  <div class="flex flex-row mt-4 mb-12 justify-between">
-    <div>
-      <h2 class="text-lg md:text-xl">{title}</h2>
-      <p class="font-normal">{label} {year}</p>
-    </div>
-    <div class="flex flex-col">
-      <div class="text-right">
+<div class="blog-post">
+  <div class="image-container">
+    <Image
+      src={image}
+      alt=" album cover"
+      quality={"high"}
+      class="rounded image-cover"
+    />
+    <div class="overlay">
+      <div class="blog-post-links">
         <a href={bandcamp} target="_blank">{textBandcamp}</a>
-      </div>
-      <div class="text-right">
         <a href={spotify} target="_blank">{textSpotify}</a>
       </div>
     </div>
   </div>
+  <div class="blog-post-info">
+    <h3 class="text-lg md:text-xl">{title}</h3>
+    <p class="font-normal">{label} {year}</p>
+  </div>
 </div>
+
+<style>
+  .blog-post {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+
+  .image-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .image-container:hover .overlay,
+  .image-container:focus-within .overlay {
+    opacity: 1;
+  }
+
+  .image-container:hover .image-cover {
+    transform: scale(1.05);
+  }
+
+  .blog-post-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .blog-post-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    background-color: white;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10rem;
+    text-align: center;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .blog-post-links a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .blog-post-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  /* Mobile: Show overlay on tap/click */
+  @media (max-width: 767px) {
+    .image-container.active .overlay {
+      opacity: 1;
+    }
+  }
+</style>
+
+<script>
+  // Add click/tap support for mobile devices
+  document.addEventListener("DOMContentLoaded", () => {
+    const imageContainers = document.querySelectorAll(".image-container");
+
+    imageContainers.forEach((container) => {
+      container.addEventListener("click", (e) => {
+        // Only toggle on mobile when clicking the container (not the links)
+        if (
+          window.innerWidth <= 767 &&
+          e.target.closest(".image-container") &&
+          !e.target.closest("a")
+        ) {
+          e.preventDefault();
+          container.classList.toggle("active");
+        }
+      });
+    });
+
+    // Close overlay when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".image-container")) {
+        imageContainers.forEach((container) => {
+          container.classList.remove("active");
+        });
+      }
+    });
+  });
+</script>

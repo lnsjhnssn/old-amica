@@ -5,11 +5,19 @@ const { video } = Astro.props;
 const { title, year, director, video_url, type } = video.data;
 ---
 
-<div class="text-left px-4">
+<div class="video-post">
   <YouTube id={video_url} class="shadow-md" playlabel={title} />
-  <div class="mt-4 mb-12">
-    <h2 class="text-lg md:text-xl">{title}</h2>
+  <div class="video-content">
+    <h3>{title}</h3>
     <p>{director}</p>
     <p>{year}</p>
   </div>
 </div>
+
+<style>
+  .video-post {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+</style>

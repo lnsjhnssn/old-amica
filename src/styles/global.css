@@ -31,7 +31,13 @@ html:focus-within {
   font-family: "Hexed";
   src: url("/fonts/TG-Hexed.otf") format("opentype");
 }
+
 /* Set core body defaults */
+
+html {
+  background-color: #1a1919;
+  color: #eeeeee;
+}
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -39,8 +45,6 @@ body {
   /* font-family: "Helvetica", sans-serif; */
   font-family: monospace;
   padding: 1rem;
-  background-color: #1a1919;
-  color: #eeeeee;
 }
 
 h1,

@@ -25,6 +25,12 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+/*FONTS*/
+
+@font-face {
+  font-family: "Hexed";
+  src: url("/fonts/TG-Hexed.otf") format("opentype");
+}
 /* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
@@ -58,10 +64,10 @@ h3 {
 }
 
 h1 {
-  font-family: inherit;
+  font-family: "Hexed";
   font-weight: inherit;
-  font-size: 1.5rem;
-  line-height: inherit;
-  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 1.7rem;
   margin-top: 1.5rem;
 }

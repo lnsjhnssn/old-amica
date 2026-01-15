@@ -5,8 +5,21 @@ import BlogPost from "../components/BlogPost.astro";
 const allPosts = await getCollection("posts");
 ---
 
-<div
-  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center max-w-7xl mx-auto"
->
+<div class="blog-grid">
   {allPosts.map((post) => <BlogPost post={post} />)}
 </div>
+
+<style>
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+
+  @media (max-width: 503px) {
+    .blog-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+</style>

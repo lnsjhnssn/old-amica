@@ -5,25 +5,25 @@ import MusicIcons from "./MusicIcons.astro";
 ---
 
 <div class="nav-container">
-  <h1><a href="/">Old Amica</a></h1>
+  <h1>Old Amica</h1>
   <ul>
     <li>
-      <a href="https://oldamica.bandcamp.com/">Bandcamp</a>
+      <a href="https://oldamica.bandcamp.com/" target="_blank">Bandcamp</a>
     </li>
     <li>
       <a
         href="https://open.spotify.com/artist/5toq1yTDxwyzLPa6nChApJ?si=rngK7OBBQe-VDjwvNOV69w"
-        >Spotify</a
+        target="_blank">Spotify</a
       >
     </li>
     <li>
-      <a href="https://instagram.com/oldamica">Instagram</a>
+      <a href="https://instagram.com/oldamica" target="_blank">Instagram</a>
     </li>
     <li>
-      <a href="https://facebook.com/oldamica">Facebook</a>
+      <a href="https://facebook.com/oldamica" target="_blank">Facebook</a>
     </li>
     <li class="mail-link">
-      <a href="mailto:oldamica@gmail.com">oldamica@gmail.com</a>
+      <a href="mailto:oldamica@gmail.com" target="_blank">oldamica@gmail.com</a>
     </li>
   </ul>
 
@@ -31,6 +31,7 @@ import MusicIcons from "./MusicIcons.astro";
     ul {
       list-style: none;
       padding: 0;
+      margin-top: 0;
     }
 
     .mail-link {
@@ -38,8 +39,27 @@ import MusicIcons from "./MusicIcons.astro";
       margin-bottom: 3rem;
     }
 
-    h1 a {
-      text-decoration: none;
+    h1 {
+      font-size: 3.7rem;
+    }
+
+    .nav-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nav-container ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (hover: hover) {
+      .nav-container ul li a:hover {
+        color: #4c977b;
+        transition: color 0.2s ease;
+      }
     }
   </style>
 </div>

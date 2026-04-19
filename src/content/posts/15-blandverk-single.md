@@ -1,6 +1,7 @@
 ---
 title: "Bländverk - Single"
 year: "2026"
+label: Whitelabrecs
 textSpotify: Spotify
 textBandcamp: Bandcamp
 bandcamp: https://oldamica.bandcamp.com/track/bl-ndverk

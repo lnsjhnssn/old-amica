@@ -1,6 +1,7 @@
 ---
 title: "Bländverk"
 year: "2026"
+label: Whitelabrecs
 textSpotify: Spotify
 textBandcamp: Bandcamp
 bandcamp: https://whitelabrecs.bandcamp.com/album/bla-ndverk

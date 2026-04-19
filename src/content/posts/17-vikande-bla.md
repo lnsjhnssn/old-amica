@@ -1,6 +1,7 @@
 ---
 title: "Vikande blå / Nuages"
 year: "2025"
+label: Handstitched
 textSpotify: Spotify
 textBandcamp: Bandcamp
 bandcamp: https://handstitched.bandcamp.com/album/vikande-bl-nuages
